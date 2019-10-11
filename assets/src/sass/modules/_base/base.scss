@@ -1,0 +1,139 @@
+// 
+// Base
+// 
+
+@import "../../variables";
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html, body {
+	background-color: $color-white;
+	font: $font-weight $font-size/$line-height $font-family;
+	color: $font-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-family-highlight;
+	line-height: $line-height-headline;
+	font-weight: $font-weight-bold-highlight;
+	color: $color-corporate;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	word-break: break-word;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+h1 {
+	font-size: $font-size-headline-1;
+
+	@media #{$media-screen-max-phone} {
+		font-size: $font-size-headline-1-mobile;
+	}
+}
+
+h2 {
+	font-size: $font-size-headline-2;
+
+	@media #{$media-screen-max-phone} {
+		font-size: $font-size-headline-2-mobile;
+	}
+}
+
+h3 {
+	font-size: $font-size-headline-3;
+
+	@media #{$media-screen-max-phone} {
+		font-size: $font-size-headline-3-mobile;
+	}
+}
+
+h4 {
+	font-size: $font-size-headline-4;
+
+	@media #{$media-screen-max-phone} {
+		font-size: $font-size-headline-4-mobile;
+	}
+}
+
+h5 {
+	font-size: $font-size-headline-5;
+
+	@media #{$media-screen-max-phone} {
+		font-size: $font-size-headline-5-mobile;
+	}
+}
+
+h6 {
+	font-size: $font-size;
+}
+
+p {
+	font-size: $font-size-paragraph;
+	line-height: $line-height-paragraph;
+	margin-top: 0;
+	margin-bottom: 20px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&.small {
+		font-size: $font-size-paragraph-small;
+	}
+}
+
+img,
+video,
+iframe {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	vertical-align: bottom;
+}
+
+a {
+	color: inherit;
+	text-decoration: underline;
+	transition: color $transition-duration;
+
+	&:hover {
+		color: $color-highlight;
+	}
+}
+
+b, strong {
+	font-weight: $font-weight-bold;
+}
+
+.float-left {
+	float: left !important;
+}
+
+.float-right {
+	float: right !important;
+}
+
+.pos-rel {
+	position:relative;
+}
+
+.clearfix {
+	@extend %clearfix;
+}
+
+.color-corporate {
+	color: $color-corporate;
+}
+
+.color-highlight {
+	color: $color-highlight;
+}

@@ -1,0 +1,92 @@
+//
+// Colors
+// 
+
+$color-corporate        : #336699;
+$color-highlight        : #cccccc; // berry
+
+$color-black            : #000000;
+$color-white            : #ffffff;
+$color-grey-darker      : mix($color-black, $color-white, 80%);
+$color-grey-dark        : mix($color-black, $color-white, 60%);
+$color-grey-light       : mix($color-black, $color-white, 40%);
+$color-grey-lighter     : mix($color-black, $color-white, 20%);
+
+//
+// Typography
+// 
+
+// font family
+$font-family        : "Open Sans", Arial, sans-serif;
+$font-weight        : 300;
+$font-weight-bold   : 600;
+
+$font-family-highlight        : "Oswald", $font-family;
+$font-weight-highlight        : 400;
+$font-weight-bold-highlight   : 600;
+
+// font size
+$font-size       : 18px;
+$font-size-small : 0.8em;
+$line-height     : 1;
+
+// color
+$font-color : $color-grey-darker;
+
+// paragraph
+$font-size-paragraph       : $font-size;
+$font-size-paragraph-small : $font-size-small;
+$line-height-paragraph     : 1.6;
+
+// headline
+$line-height-headline        : 1.4;
+
+$font-size-headline-1        : 2.8em;
+$font-size-headline-1-mobile : 2em;
+
+$font-size-headline-2        : 2.4em;
+$font-size-headline-2-mobile : 1.8em;
+
+$font-size-headline-3        : 2em;
+$font-size-headline-3-mobile : 1.6em;
+
+$font-size-headline-4        : 1.6em;
+$font-size-headline-4-mobile : 1.4em;
+
+$font-size-headline-5        : 1.2em;
+$font-size-headline-5-mobile : 1.2em;
+
+$font-size-headline-6        : 1em;
+$font-size-headline-6-mobile : 1em;
+
+//
+// Breakpoints
+// 
+
+$screen-desktop-max : 1440px;
+$screen-desktop-min : 1025px;
+$screen-tablet-max  : $screen-desktop-min - 1;
+$screen-tablet-min  : 769px;
+$screen-phone-max   : $screen-tablet-min - 1;
+
+$media-screen-max-desktop : "screen and (max-width: #{$screen-desktop-max})";
+$media-screen-min-desktop : "screen and (min-width: #{$screen-desktop-min})";
+$media-screen-max-tablet  : "screen and (max-width: #{$screen-tablet-max})";
+$media-screen-min-tablet  : "screen and (min-width: #{$screen-tablet-min})";
+$media-screen-max-phone   : "screen and (max-width: #{$screen-phone-max})";
+
+// 
+// Can Hover
+// 
+/* Hinweis: media:hover wird nicht von IE11 und Firefox unterstützt und sollte deshalb sparsam eingesetzt werden.
+ * Notwendig ist es aber, weil Buttons in Safari nicht klickbar sind, wenn ein hover-Effekt darauf liegt.
+ * Für Buttons MUSS media:hover also eingesetzt werden.
+ */
+
+$media-can-hover : "screen and (hover: hover)";
+
+//
+// Transition Duration
+// 
+
+$transition-duration: 350ms;
