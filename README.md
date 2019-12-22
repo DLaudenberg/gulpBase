@@ -23,6 +23,9 @@ gulpBase
   - + sass
     - + style.scss
     - + variables.scss
+    - + base
+      - + _all.scss
+        + *
     - + mixins
       - + _all.scss
         + *

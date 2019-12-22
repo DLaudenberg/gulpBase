@@ -6,7 +6,7 @@
 // default grid
 // 
 
-@import "../../variables";
+@import "../variables";
 
 .grid-container {
 	width: 100%;
@@ -41,6 +41,7 @@
 
 	margin-left: -10px;
 	margin-right: -10px;
+	padding-top: 20px;
 }
 .grid-rtl {
 	flex-direction: row-reverse;
@@ -48,15 +49,13 @@
 .grid-no-margin {
 	margin-left: 0;
 	margin-right: 0;
+	padding-top: 0;
 
 	& > .cell {
 		padding-left: 0;
 		padding-right: 0;
+		padding-bottom: 0;
 	}
-}
-.grid-margin-y {
-	margin-top: 20px;
-	margin-bottom: 20px;
 }
 
 .cell {
@@ -69,6 +68,7 @@
 	width: 100%;
 	padding-left: 10px;
 	padding-right: 10px;
+	padding-bottom: 20px;
 
 	&.auto {
 		width: auto;
@@ -77,6 +77,7 @@
 		-ms-flex: 1 1 0px;
 		flex: 1 1 0px;
 	}
+
 	&.shrink {
 		width: auto;
 		-webkit-box-flex: 0;
