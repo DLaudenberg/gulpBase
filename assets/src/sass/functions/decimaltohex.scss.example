@@ -1,0 +1,39 @@
+// 
+// Decimal to Hexadecimal
+// 
+
+@function dectohex($num) {
+	$num : round($num);
+	$hex : '';
+
+	@while ($num > 0) {
+		$rest : $num % 16;
+		$newnum : floor($num / 16);
+
+		@if ($rest == 15) {
+			$hex : $hex + 'F';
+		} @else if ($rest == 14) {
+			$hex : $hex + 'E';
+		} @else if ($rest == 13) {
+			$hex : $hex + 'D';
+		} @else if ($rest == 12) {
+			$hex : $hex + 'C';
+		} @else if ($rest == 11) {
+			$hex : $hex + 'B';
+		} @else if ($rest == 10) {
+			$hex : $hex + 'A';
+		} @else {
+			$hex : $hex + $rest;
+		}
+
+		$num : $newnum;
+	}
+
+	@if ( $hex == '' ) {
+		$hex : '00';
+	} @else if (str-length($hex) == 1) {
+		$hex : '0' + $hex;
+	}
+
+	@return $hex;
+}

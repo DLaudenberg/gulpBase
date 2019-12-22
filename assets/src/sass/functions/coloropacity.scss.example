@@ -1,0 +1,11 @@
+// 
+// Color Opacity
+// 
+
+@function coloropacity($color, $opacity:0.5){
+	$r : red($color);
+	$g : green($color);
+	$b : blue($color);
+
+	@return rgba($r, $g, $b, $opacity);
+}

@@ -5,8 +5,14 @@
 // Base Definitions
 @import "base/_all";
 
+// All Functions
+@import "functions/_all";
+
 // All Mixins
 @import "mixins/_all";
+
+// All Placeholders
+@import "placeholders/_all";
 
 // Font definitions
 @import "../fonts/fonts";

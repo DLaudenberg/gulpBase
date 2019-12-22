@@ -1,0 +1,18 @@
+// 
+// Background-Opacity
+// 
+
+@mixin bgopacity($color, $opacity:0.5, $fallback:null) {
+	$r : red($color);
+	$g : green($color);
+	$b : blue($color);
+
+	@if ($fallback == null) {
+		background-color: $color;
+	}
+	@else {
+		background-color: $fallback;
+	}
+
+	background-color: rgba($r, $g, $b, $opacity);
+}

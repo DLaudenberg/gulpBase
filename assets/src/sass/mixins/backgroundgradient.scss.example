@@ -1,0 +1,39 @@
+// 
+// Background Gradient
+// 
+
+@mixin backgroundgradient($color1, $color2, $direction:'vertical', $fallback:null) {
+	$r1 : red($color1);
+	$g1 : green($color1);
+	$b1 : blue($color1);
+	$o1 : opacity($color1);
+	$alphacolor1 : '#' + dectohex(($o1 * 255)) + dectohex($r1) + dectohex($g1) + dectohex($b1);
+
+	$r2 : red($color2);
+	$g2 : green($color2);
+	$b2 : blue($color2);
+	$o2 : opacity($color2);
+	$alphacolor2 : '#' + dectohex(($o2 * 255)) + dectohex($r2) + dectohex($g2) + dectohex($b2);
+
+	// fallback for old browsers
+	@if ($fallback == null) {
+		background: $color2; /* Old browsers */
+	}
+	else {
+		background: $fallback; /* Old browsers */
+	}
+
+	// the gradient definitions
+	@if ($direction == 'horizontal') {
+		background: -moz-linear-gradient(left, $color1 0%, $color2 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left, $color1 0%, $color2 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right, $color1 0%, $color2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$alphacolor1}', endColorstr='#{$alphacolor2}', GradientType=1 ); /* IE6-9 */
+	}
+	@else {
+		background: -moz-linear-gradient(top, $color1 0%, $color2 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, $color1 0%, $color2 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, $color1 0%, $color2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$alphacolor1}', endColorstr='#{$alphacolor2}', GradientType=0 ); /* IE6-9 */
+	}
+}

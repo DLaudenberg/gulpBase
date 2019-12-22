@@ -1,0 +1,19 @@
+// 
+// Transform
+// 
+
+@mixin transform($transformation) {
+	-webkit-transform: $transformation;
+	-moz-transform:    $transformation;
+	-ms-transform:     $transformation;
+	-o-transform:      $transformation;
+	transform:         $transformation;
+}
+
+@mixin transformorigin($origin) {
+	-webkit-transform-origin: $origin;
+	-moz-transform-origin:    $origin;
+	-ms-transform-origin:     $origin;
+	-o-transform-origin:      $origin;
+	transform-origin:         $origin;
+}

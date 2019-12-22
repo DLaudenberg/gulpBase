@@ -1,0 +1,19 @@
+// 
+// Margin-Top and -Bottom
+// 
+
+@mixin marginTop($margin:1em) {
+	margin-top: $margin;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+@mixin marginBottom($margin:1em) {
+	margin-bottom: $margin;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
