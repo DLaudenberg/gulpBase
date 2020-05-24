@@ -1,7 +1,7 @@
 {
-  "name": "gruntBase",
+  "name": "gulp-base",
   "version": "1.0.0",
-  "description": "gruntBase",
+  "description": "boilderplate to rapidly instantiate gulp-based projects",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,10 +11,10 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "gulp-uglifycss": "^1.1.0",
-    "yargs": "^14.0.0"
+    "yargs": "^15.3.1"
   }
 }
