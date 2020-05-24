@@ -1,0 +1,33 @@
+// 
+// HELPERS
+// 
+
+@import "../variables";
+
+.float-left {
+	float: left !important;
+}
+
+.float-right {
+	float: right !important;
+}
+
+.pos-rel {
+	position:relative;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.clearfix {
+	@extend %clearfix;
+}
+
+.color-corporate {
+	color: $color-corporate;
+}
+
+.color-highlight {
+	color: $color-highlight;
+}

@@ -7,10 +7,12 @@ $color-highlight        : #abcdef;
 
 $color-black            : #000000;
 $color-white            : #ffffff;
+$color-grey-darkest     : mix($color-black, $color-white, 95%);
 $color-grey-darker      : mix($color-black, $color-white, 80%);
 $color-grey-dark        : mix($color-black, $color-white, 60%);
 $color-grey-light       : mix($color-black, $color-white, 40%);
 $color-grey-lighter     : mix($color-black, $color-white, 20%);
+$color-grey-lightest    : mix($color-black, $color-white,  5%);
 
 //
 // Typography
@@ -59,21 +61,35 @@ $font-size-headline-5-mobile : 1.2em;
 $font-size-headline-6        : 1em;
 $font-size-headline-6-mobile : 1em;
 
+// 
+// Grid
+// 
+
+$grid-spacing: 1em;
+
 //
 // Breakpoints
 // 
 
+$screen-phone-max   : 768px;
+$screen-tablet-min  : $screen-phone-max + 1;
+$screen-tablet-max  : 1024px;
+$screen-desktop-min : $screen-tablet-max + 1;
 $screen-desktop-max : 1440px;
-$screen-desktop-min : 1025px;
-$screen-tablet-max  : $screen-desktop-min - 1;
-$screen-tablet-min  : 769px;
-$screen-phone-max   : $screen-tablet-min - 1;
+$screen-large-min   : $screen-desktop-max + 1;
 
+$media-screen-min-large   : "screen and (min-width: #{$screen-large-min})";
 $media-screen-max-desktop : "screen and (max-width: #{$screen-desktop-max})";
 $media-screen-min-desktop : "screen and (min-width: #{$screen-desktop-min})";
 $media-screen-max-tablet  : "screen and (max-width: #{$screen-tablet-max})";
 $media-screen-min-tablet  : "screen and (min-width: #{$screen-tablet-min})";
 $media-screen-max-phone   : "screen and (max-width: #{$screen-phone-max})";
+
+$media-screen-not-tablet  : "screen and (max-width: #{$screen-phone-max}), screen and (min-width: #{$screen-desktop-min})";
+$media-screen-only-tablet : "screen and (min-width: #{$screen-tablet-min}) and (max-width: #{$screen-tablet-max})";
+
+$media-screen-not-desktop  : "screen and (max-width: #{$screen-tablet-max}), screen and (min-width: #{$screen-large-min})";
+$media-screen-only-desktop : "screen and (min-width: #{$screen-desktop-min}) and (max-width: #{$screen-desktop-max})";
 
 // 
 // Can Hover
@@ -86,7 +102,21 @@ $media-screen-max-phone   : "screen and (max-width: #{$screen-phone-max})";
 $media-can-hover : "screen and (hover: hover)";
 
 //
+// Opacities
+// 
+
+$opacity-soft: 0.2;
+$opacity-medium: 0.5;
+$opacity-strong: 0.9;
+
+//
 // Transition Duration
 // 
 
 $transition-duration: 350ms;
+
+//
+// Border Radius
+// 
+
+$border-radius: 0.2em;

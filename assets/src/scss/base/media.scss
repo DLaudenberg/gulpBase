@@ -1,0 +1,15 @@
+// 
+// Media
+// 
+
+// @import "../variables";
+
+img,
+video,
+iframe,
+svg {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	vertical-align: bottom;
+}

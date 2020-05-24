@@ -1,0 +1,17 @@
+// 
+// Text
+// 
+
+@import "../variables";
+
+ul, ol {
+	margin-top: 0;
+	@include marginBottom();
+
+	li {
+		font-size: $font-size-paragraph;
+		line-height: $line-height-paragraph;
+		margin-top: 0;
+		@include marginBottom();
+	}
+}

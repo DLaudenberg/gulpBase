@@ -2,9 +2,6 @@
 // Variables
 @import "variables";
 
-// Base Definitions
-@import "base/_all";
-
 // All Functions
 @import "functions/_all";
 
@@ -16,6 +13,9 @@
 
 // Font definitions
 @import "../fonts/fonts";
+
+// Base Definitions
+@import "base/_all";
 
 // All Modules
 @import "modules/_all";

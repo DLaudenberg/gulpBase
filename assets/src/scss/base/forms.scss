@@ -1,0 +1,77 @@
+// 
+// Forms
+// 
+
+@import "../variables";
+
+.form-group {
+	@include marginBottom();
+}
+
+form {}
+
+label {
+	display: block;
+	font-weight: $font-weight-bold;
+	margin-bottom: 0.2em;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+	font: inherit;
+	line-height: 1;
+	display: block;
+	width: 100%;
+	border: 1px solid $color-grey-light;
+	padding: 0.2em 0.5em;
+	border-radius: $border-radius;
+	outline: none;
+	transition: border-color $transition-duration;
+
+	&:focus {
+		border-color: $color-highlight;
+	}
+}
+
+.button,
+input[type="button"],
+input[type="submit"],
+button {
+	font: inherit;
+	font-weight: $font-weight-bold;
+	line-height: 1;
+	text-align: center;
+	background: none coloropacity($color-white, $opacity-medium);
+	border: 2px solid $color-highlight;
+	border-radius: $border-radius;
+	padding: 0.5em 1em;
+	display: inline-block;
+	vertical-align: bottom;
+	outline: none;
+	cursor: pointer;
+	@include transition(background $transition-duration);
+
+	&:focus,
+	&:hover {
+		background-color: coloropacity($color-highlight, $opacity-soft);
+	}
+
+	&.button-block {
+		display: block;
+		width: 100%;
+	}
+
+	&.button-small {
+		padding: 0.2em 0.5em;
+	}
+
+	&.button-icon {
+		.icon {
+			margin-right: 0.5em;
+			float: left;
+		}
+	}
+}

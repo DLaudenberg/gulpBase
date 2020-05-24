@@ -30,7 +30,7 @@ console.log("");
 // 
 gulp.task('compile-sass', () => {
 
-	var css_file = gulp.src('./assets/src/sass/style.scss')
+	var css_file = gulp.src('./assets/src/scss/styles.scss')
 		.pipe(sass());
 
 	if (!isDebug) {
@@ -114,7 +114,7 @@ gulp.task('copy-fonts', () => {
 // 
 gulp.task('watch-assets', () => {
 	
-	gulp.watch('./assets/src/sass/**/*.scss', gulp.series(['compile-sass']));
+	gulp.watch('./assets/src/scss/**/*.scss', gulp.series(['compile-sass']));
 	gulp.watch('./assets/src/js/**/*.js', gulp.series(['compile-js']));
 });
 
