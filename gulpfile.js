@@ -30,7 +30,7 @@ console.log("");
 // 
 gulp.task('compile-sass', () => {
 
-	var css_file = gulp.src('./assets/src/scss/styles.scss')
+	var css_file = gulp.src('./assets/scss/styles.scss')
 		.pipe(sass());
 
 	if (!isDebug) {
@@ -46,7 +46,7 @@ gulp.task('compile-sass', () => {
 		.pipe(rename({
 			extname : '.min.css'
 		}))
-		.pipe(gulp.dest('./assets/built/css'));
+		.pipe(gulp.dest('./dist/css'));
 });
 
 // 
@@ -54,7 +54,7 @@ gulp.task('compile-sass', () => {
 // 
 gulp.task('compile-js', () => {
 
-	var js_files = gulp.src('./assets/src/js/**/*.js')
+	var js_files = gulp.src('./assets/js/**/*.js')
 		.pipe(concat('script.js'));
 
 	if (!isDebug) {
@@ -67,7 +67,7 @@ gulp.task('compile-js', () => {
 		.pipe(rename({
 			extname : '.min.js'
 		}))
-		.pipe(gulp.dest('./assets/built/js'));
+		.pipe(gulp.dest('./dist/js'));
 });
 
 // 
@@ -76,7 +76,7 @@ gulp.task('compile-js', () => {
 gulp.task('compile-css-libs', () => {
 
 	var libs_css = [
-		'./assets/src/libs/demo-lib/demo.css'
+		'./assets/libs/demo-lib/demo.css'
 	];
 
 	return gulp.src(libs_css)
@@ -85,18 +85,18 @@ gulp.task('compile-css-libs', () => {
 			"maxLineLen"   : 1024,
 			"uglyComments" : true
 		}))
-		.pipe(gulp.dest('./assets/built/libs/'));
+		.pipe(gulp.dest('./dist/libs/'));
 });
 gulp.task('compile-js-libs', () => {
 
 	var libs_js = [
-		'./assets/src/libs/demo-lib/demo.js'
+		'./assets/libs/demo-lib/demo.js'
 	];
 
 	return gulp.src(libs_js)
 		.pipe(concat('vendor.min.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('./assets/built/libs/'));
+		.pipe(gulp.dest('./dist/libs/'));
 });
 gulp.task('compile-libs', gulp.series('compile-css-libs','compile-js-libs'));
 
@@ -105,8 +105,8 @@ gulp.task('compile-libs', gulp.series('compile-css-libs','compile-js-libs'));
 // 
 gulp.task('copy-fonts', () => {
 
-	return gulp.src('./assets/src/fonts/**/*.{eot,svg,ttf,woff}')
-		.pipe(gulp.dest('./assets/built/fonts/'));
+	return gulp.src('./assets/fonts/**/*.{eot,svg,ttf,woff}')
+		.pipe(gulp.dest('./dist/fonts/'));
 });
 
 // 
@@ -114,8 +114,8 @@ gulp.task('copy-fonts', () => {
 // 
 gulp.task('watch-assets', () => {
 	
-	gulp.watch('./assets/src/scss/**/*.scss', gulp.series(['compile-sass']));
-	gulp.watch('./assets/src/js/**/*.js', gulp.series(['compile-js']));
+	gulp.watch('./assets/scss/**/*.scss', gulp.series(['compile-sass']));
+	gulp.watch('./assets/js/**/*.js', gulp.series(['compile-js']));
 });
 
 // 
