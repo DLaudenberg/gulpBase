@@ -43,7 +43,7 @@ h6 {
 	font-size: $font-size;
 	@include marginBottom(#{1em/$font-size-headline-6}em);
 }
-@media #{$media-screen-max-phone} {
+@include media-breakpoint-md-max() {
 
 	h1 {
 		font-size: $font-size-headline-1-mobile;

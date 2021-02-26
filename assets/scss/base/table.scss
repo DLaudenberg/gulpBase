@@ -38,7 +38,7 @@ table {
 	}
 }
 
-@media #{$media-screen-max-tablet} {
+@include media-breakpoint-md-max() {
 
 	table {
 		th, td {

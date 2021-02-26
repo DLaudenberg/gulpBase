@@ -71,25 +71,15 @@ $grid-spacing: 1em;
 // Breakpoints
 // 
 
-$screen-phone-max   : 768px;
-$screen-tablet-min  : $screen-phone-max + 1;
-$screen-tablet-max  : 1024px;
-$screen-desktop-min : $screen-tablet-max + 1;
-$screen-desktop-max : 1440px;
-$screen-large-min   : $screen-desktop-max + 1;
+$screen-lg-max : 1199px;
+$screen-md-max : 991px;
+$screen-sm-max : 767px;
+$screen-xs-max : 575px;
 
-$media-screen-min-large   : "screen and (min-width: #{$screen-large-min})";
-$media-screen-max-desktop : "screen and (max-width: #{$screen-desktop-max})";
-$media-screen-min-desktop : "screen and (min-width: #{$screen-desktop-min})";
-$media-screen-max-tablet  : "screen and (max-width: #{$screen-tablet-max})";
-$media-screen-min-tablet  : "screen and (min-width: #{$screen-tablet-min})";
-$media-screen-max-phone   : "screen and (max-width: #{$screen-phone-max})";
-
-$media-screen-not-tablet  : "screen and (max-width: #{$screen-phone-max}), screen and (min-width: #{$screen-desktop-min})";
-$media-screen-only-tablet : "screen and (min-width: #{$screen-tablet-min}) and (max-width: #{$screen-tablet-max})";
-
-$media-screen-not-desktop  : "screen and (max-width: #{$screen-tablet-max}), screen and (min-width: #{$screen-large-min})";
-$media-screen-only-desktop : "screen and (min-width: #{$screen-desktop-min}) and (max-width: #{$screen-desktop-max})";
+$screen-xl-min : $screen-lg-max + 1;
+$screen-lg-min : $screen-md-max + 1;
+$screen-md-min : $screen-sm-max + 1;
+$screen-sm-min : $screen-xs-max + 1;
 
 // 
 // Can Hover
