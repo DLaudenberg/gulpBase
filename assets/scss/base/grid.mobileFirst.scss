@@ -58,11 +58,11 @@
 	margin-right: -$grid-spacing/2;
 	padding-top: $grid-spacing;
 
-	.grid-rtl {
+	&.grid-rtl {
 		flex-direction: row-reverse;
 	}
 
-	.grid-no-margin {
+	&.grid-no-margin {
 		margin-left: 0;
 		margin-right: 0;
 		padding-top: 0;
@@ -74,7 +74,7 @@
 		}
 	}
 
-	.grid-no-margin-tb {
+	&.grid-no-margin-tb {
 		padding-top: 0;
 
 		& > .cell {
@@ -413,7 +413,7 @@
 // hide
 
 .hide-xs {
-	// -
+	display: none !important;
 }
 
 .hide-sm {
