@@ -30,7 +30,7 @@ console.log("");
 // 
 gulp.task('compile-sass', () => {
 
-	var css_file = gulp.src('./assets/scss/styles.scss')
+	var css_file = gulp.src('./src/scss/styles.scss')
 		.pipe(sass());
 
 	if (!isDebug) {
@@ -53,7 +53,7 @@ gulp.task('compile-sass', () => {
 // 
 gulp.task('compile-js', () => {
 
-	var js_files = gulp.src('./assets/js/**/*.js')
+	var js_files = gulp.src('./src/js/**/*.js')
 		.pipe(concat('script.js'));
 
 	if (!isDebug) {
@@ -75,7 +75,7 @@ gulp.task('compile-js', () => {
 gulp.task('compile-css-libs', () => {
 
 	var libs_css = [
-		'./assets/libs/demo-lib/demo.css'
+		'./src/libs/demo-lib/demo.css'
 	];
 
 	return gulp.src(libs_css)
@@ -88,7 +88,7 @@ gulp.task('compile-css-libs', () => {
 gulp.task('compile-js-libs', () => {
 
 	var libs_js = [
-		'./assets/libs/demo-lib/demo.js'
+		'./src/libs/demo-lib/demo.js'
 	];
 
 	return gulp.src(libs_js)
@@ -103,7 +103,7 @@ gulp.task('compile-libs', gulp.series('compile-css-libs','compile-js-libs'));
 // 
 gulp.task('copy-fonts', () => {
 
-	return gulp.src('./assets/fonts/**/*.{eot,svg,ttf,woff}')
+	return gulp.src('./src/fonts/**/*.{eot,svg,ttf,woff}')
 		.pipe(gulp.dest('./dist/fonts/'));
 });
 
@@ -112,8 +112,8 @@ gulp.task('copy-fonts', () => {
 // 
 gulp.task('watch-assets', () => {
 	
-	gulp.watch('./assets/scss/**/*.scss', gulp.series(['compile-sass']));
-	gulp.watch('./assets/js/**/*.js', gulp.series(['compile-js']));
+	gulp.watch('./src/scss/**/*.scss', gulp.series(['compile-sass']));
+	gulp.watch('./src/js/**/*.js', gulp.series(['compile-js']));
 });
 
 // 
