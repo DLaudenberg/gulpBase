@@ -4,14 +4,12 @@ var series   = require('gulp');
 var parallel = require('gulp');
 
 // Include plugins.
-var sass      = require('gulp-sass');
+var sass      = require('gulp-sass')(require('sass'));
 var uglify    = require('gulp-uglify');
 var cleanCSS  = require('gulp-clean-css');
 var rename    = require('gulp-rename');
 var concat    = require('gulp-concat');
 var argv      = require('yargs').argv;
-
-sass.compiler = require('node-sass');
 
 // read parameters
 var isDebug = (argv.debug === undefined) ? false : true;

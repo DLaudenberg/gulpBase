@@ -1,6 +1,6 @@
 # gulpBase
 
-A gulp-file and folder-structure to start develop frontend-projects.
+A gulp-file and folder-structure to start develop frontend-projects. Just do a Git-Clone and get started.
 
 Note: This is a single-starting-point, so once your application is up and running, there is no need to keep it compatible with this Git-version. Feel free to customize it to your personal needs.
 
