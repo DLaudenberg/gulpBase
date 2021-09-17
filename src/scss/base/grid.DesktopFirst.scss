@@ -2,11 +2,12 @@
 // Grid Desktop-First
 // 
 
+@use 'sass:math';
+@import "../variables";
+
 // 
 // default grid
 // 
-
-@import "../variables";
 
 // grid-container
 
@@ -55,8 +56,8 @@
 	-ms-flex-flow: row wrap;
 	flex-flow: row wrap;
 
-	margin-left: -$grid-spacing/2;
-	margin-right: -$grid-spacing/2;
+	margin-left: math.div(-$grid-spacing, 2);
+	margin-right: math.div(-$grid-spacing, 2);
 	padding-top: $grid-spacing;
 
 	&.grid-rtl {
@@ -94,8 +95,8 @@
 	min-height: 0px;
 	min-width: 0px;
 	width: 100%;
-	padding-left: $grid-spacing/2;
-	padding-right: $grid-spacing/2;
+	padding-left: math.div($grid-spacing, 2);
+	padding-right: math.div($grid-spacing, 2);
 	padding-bottom: $grid-spacing;
 
 	&.auto {
