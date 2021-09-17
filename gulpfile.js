@@ -6,7 +6,7 @@ var parallel = require('gulp');
 // Include plugins.
 var sass      = require('gulp-sass');
 var uglify    = require('gulp-uglify');
-var uglifycss = require('gulp-uglifycss');
+var cleanCSS  = require('gulp-clean-css');
 var rename    = require('gulp-rename');
 var concat    = require('gulp-concat');
 var argv      = require('yargs').argv;
@@ -36,9 +36,8 @@ gulp.task('compile-sass', () => {
 	if (!isDebug) {
 
 		css_file = css_file
-			.pipe(uglifycss({
-				"maxLineLen"   : 1024,
-				"uglyComments" : true
+			.pipe(cleanCSS({
+				format : { wrapAt: 1024 }
 			}));
 	}
 
@@ -81,9 +80,8 @@ gulp.task('compile-css-libs', () => {
 
 	return gulp.src(libs_css)
 		.pipe(concat('vendor.min.css'))
-		.pipe(uglifycss({
-			"maxLineLen"   : 1024,
-			"uglyComments" : true
+		.pipe(cleanCSS({
+			format : { wrapAt: 1024 }
 		}))
 		.pipe(gulp.dest('./dist/libs/'));
 });
